@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_border_white"
+    android:padding="10dp">
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_Movie"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="30dip"
+        app:riv_border_width="2dip"
+        app:riv_border_color="#333333"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="repeat"
+        app:riv_oval="true"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="116dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Movie Name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17dp"
+        android:id="@+id/tv_moviename"
+        app:layout_constraintStart_toEndOf="@id/iv_Movie"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="116dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Movie Name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@id/iv_Movie"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_moviename"
+        android:layout_marginTop="10dp"/>
+</android.support.constraint.ConstraintLayout>
