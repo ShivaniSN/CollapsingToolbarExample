@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Activity_Main extends AppCompatActivity {
 
@@ -23,8 +24,18 @@ public class Activity_Main extends AppCompatActivity {
         buttonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_Main.this, Activity_MovieList.class);
-                startActivity(intent);
+                int cnt = 0;
+
+                if (editTextSearch.getText().length() < 2){
+                    Toast.makeText(Activity_Main.this,"Search string missing", Toast.LENGTH_SHORT).show();
+                    cnt ++;
+                }
+
+                if (cnt == 0) {
+                    Intent intent = new Intent(Activity_Main.this, Activity_MovieList.class);
+                    intent.putExtra("search_string",editTextSearch.getText().toString());
+                    startActivity(intent);
+                }
             }
         });
     }

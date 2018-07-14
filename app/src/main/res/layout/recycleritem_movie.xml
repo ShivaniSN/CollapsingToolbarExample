@@ -10,7 +10,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/iv_Movie"
         android:scaleType="fitCenter"
-        app:riv_corner_radius="30dip"
+        app:riv_corner_radius="10dip"
         app:riv_border_width="2dip"
         app:riv_border_color="#333333"
         app:riv_mutate_background="true"
@@ -20,7 +20,6 @@
         android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,5 +43,6 @@
         app:layout_constraintStart_toEndOf="@id/iv_Movie"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_moviename"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_movieyear"/>
 </android.support.constraint.ConstraintLayout>
