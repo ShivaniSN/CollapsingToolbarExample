@@ -63,6 +63,15 @@ public class Activity_MovieList extends AppCompatActivity{
         });
 
         getMoviesListVolleyRequest();
+
+        recyclerViewMovies.addOnItemTouchListener(new RecyclerTouchListener(Activity_MovieList.this, new RecyclerTouchListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(Activity_MovieList.this, Activity_MovieDetails.class);
+                intent.putExtra("movieid",usersList.get(position).getStringMovieId());
+                startActivity(intent);
+            }
+        }));
     }
 
     public void getMoviesListVolleyRequest(){
@@ -109,12 +118,6 @@ public class Activity_MovieList extends AppCompatActivity{
 //                params.put("apikey",Constants.stringAPIKey);
                 return params;
             }
-//            @Override
-//            public Map<String, String> getHeaders() throws AuthFailureError {
-//                Map<String, String> params = new HashMap<String, String>();
-//                params.put("Content-Type", "application/json");
-//                return params;
-//            }
         };
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(
                 20000,
