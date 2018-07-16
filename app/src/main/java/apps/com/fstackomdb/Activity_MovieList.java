@@ -57,7 +57,7 @@ public class Activity_MovieList extends AppCompatActivity{
         imageViewBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_MovieList.this, Activity_MovieDetails.class);
+                Intent intent = new Intent(Activity_MovieList.this, Activity_Main.class);
                 startActivity(intent);
             }
         });
